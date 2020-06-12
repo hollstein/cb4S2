@@ -295,7 +295,7 @@ class Gui(tk.Tk):
 
         frame = tk.Frame(self)
         frame.grid(row=i_row, column=1, sticky=tk.E + tk.W)
-        for ii in range(0, 4):
+        for ii in range(4):
             tk.Grid.columnconfigure(frame, ii, weight=1)
 
         self.tk_button1 = tk.Button(frame, text='get granules file', command=self.get_input_file)
@@ -477,8 +477,6 @@ class Gui(tk.Tk):
             print(err)
             print(repr(err))
             print(traceback.print_tb(err.__traceback__))
-            pass
-
         for button in self.buttons_deactivate_while_processing:
             button["state"] = "normal"
 
